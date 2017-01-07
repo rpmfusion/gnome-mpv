@@ -3,8 +3,8 @@
 %global mpv_version 1.20
 
 Name:           gnome-mpv
-Version:        0.10
-Release:        2%{?dist}
+Version:        0.11
+Release:        1%{?dist}
 Summary:        A simple GTK+ frontend for mpv
 
 License:        GPLv3+
@@ -70,6 +70,9 @@ fi
 %{_datadir}/icons/hicolor/*/apps/%{name}*.svg
 
 %changelog
+* Sat Jan 07 2017 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.11-1
+- Update to 0.11
+
 * Mon Nov 28 2016 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.10-2
 - Bump release
 
