@@ -1,10 +1,6 @@
-%global glib2_version 2.44
-%global gtk3_version 3.18
-%global mpv_version 1.20
-
 Name:           gnome-mpv
-Version:        0.11
-Release:        2%{?dist}
+Version:        0.12
+Release:        1%{?dist}
 Summary:        A simple GTK+ frontend for mpv
 
 License:        GPLv3+
@@ -13,12 +9,12 @@ Source0:        %{url}/releases/download/v%{version}/%{name}-%{version}.tar.xz
 
 BuildRequires:  gcc
 BuildRequires:  desktop-file-utils
-BuildRequires:  pkgconfig(glib-2.0) >= %{glib2_version}
-BuildRequires:  pkgconfig(gtk+-3.0) >= %{gtk3_version}
+BuildRequires:  pkgconfig(glib-2.0) >= 2.44
+BuildRequires:  pkgconfig(gtk+-3.0) >= 3.18
 BuildRequires:  intltool >= 0.40.6
 BuildRequires:  libappstream-glib
 BuildRequires:  pkgconfig(epoxy)
-BuildRequires:  pkgconfig(mpv) >= %{mpv_version}
+BuildRequires:  pkgconfig(mpv) >= 1.20
 Requires:       youtube-dl >= 2016.03.06
 Requires:       hicolor-icon-theme
 
@@ -70,6 +66,9 @@ fi
 %{_datadir}/icons/hicolor/*/apps/%{name}*.svg
 
 %changelog
+* Tue Jun 13 2017 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.12-1
+- Update to 0.12
+
 * Sun Mar 19 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 0.11-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
 
