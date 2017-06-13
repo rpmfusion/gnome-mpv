@@ -69,9 +69,6 @@ fi
 * Tue Jun 13 2017 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.12-1
 - Update to 0.12
 
-* Sun Mar 19 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 0.11-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
-
 * Sat Jan 07 2017 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.11-1
 - Update to 0.11
 
