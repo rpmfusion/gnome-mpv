@@ -1,6 +1,6 @@
 Name:           gnome-mpv
 Version:        0.12
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A simple GTK+ frontend for mpv
 
 License:        GPLv3+
@@ -66,6 +66,9 @@ fi
 %{_datadir}/icons/hicolor/*/apps/%{name}*.svg
 
 %changelog
+* Thu Aug 31 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 0.12-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
+
 * Tue Jun 13 2017 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.12-1
 - Update to 0.12
 
