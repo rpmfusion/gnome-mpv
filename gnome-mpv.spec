@@ -1,11 +1,12 @@
 Name:           gnome-mpv
-Version:        0.12
-Release:        3%{?dist}
+Version:        0.13
+Release:        1%{?dist}
 Summary:        A simple GTK+ frontend for mpv
 
 License:        GPLv3+
 URL:            https://github.com/gnome-mpv/gnome-mpv
 Source0:        %{url}/releases/download/v%{version}/%{name}-%{version}.tar.xz
+Patch0:         update-appdata-and-add-missing-meson-build-file.patch
 
 BuildRequires:  gcc
 BuildRequires:  desktop-file-utils
@@ -24,7 +25,7 @@ GNOME MPV interacts with mpv via the client API exported by libmpv,
 allowing access to mpv's powerful playback capabilities.
 
 %prep
-%autosetup
+%autosetup -p1
 
 %build
 %configure
@@ -61,12 +62,17 @@ fi
 %{_bindir}/%{name}
 %{_datadir}/appdata/io.github.GnomeMpv.appdata.xml
 %{_datadir}/applications/io.github.GnomeMpv.desktop
+%{_datadir}/dbus-1/services/io.github.GnomeMpv.service
 %{_datadir}/glib-2.0/schemas/io.github.GnomeMpv.gschema.xml
 # The old GSchema is left installed for settings migration.
 %{_datadir}/glib-2.0/schemas/org.gnome-mpv.gschema.xml
 %{_datadir}/icons/hicolor/*/apps/%{name}*.svg
+ %{_mandir}/man1/%{name}.1.gz
 
 %changelog
+* Tue Oct 17 2017 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.13-1
+- Update to 0.13
+
 * Fri Sep 01 2017 Leigh Scott <leigh123linux@googlemail.com> - 0.12-3
 - Add build requires mesa-libEGL-devel
 
