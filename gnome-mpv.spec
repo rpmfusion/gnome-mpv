@@ -76,9 +76,6 @@ fi
 * Fri Sep 01 2017 Leigh Scott <leigh123linux@googlemail.com> - 0.12-3
 - Add build requires mesa-libEGL-devel
 
-* Thu Aug 31 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 0.12-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
-
 * Tue Jun 13 2017 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.12-1
 - Update to 0.12
 
