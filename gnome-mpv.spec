@@ -1,5 +1,5 @@
 Name:           gnome-mpv
-Version:        0.13
+Version:        0.14
 Release:        1%{?dist}
 Summary:        A simple GTK+ frontend for mpv
 
@@ -70,6 +70,9 @@ fi
  %{_mandir}/man1/%{name}.1.gz
 
 %changelog
+* Mon Feb 19 2018 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.14-1
+- Update to 0.14
+
 * Tue Oct 17 2017 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.13-1
 - Update to 0.13
 
