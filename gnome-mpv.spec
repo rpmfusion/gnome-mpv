@@ -1,6 +1,6 @@
 Name:           gnome-mpv
 Version:        0.14
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A simple GTK+ frontend for mpv
 
 License:        GPLv3+
@@ -70,6 +70,9 @@ fi
  %{_mandir}/man1/%{name}.1.gz
 
 %changelog
+* Thu Mar 01 2018 RPM Fusion Release Engineering <leigh123linux@googlemail.com> - 0.14-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
+
 * Mon Feb 19 2018 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.14-1
 - Update to 0.14
 
