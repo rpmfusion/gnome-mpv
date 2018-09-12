@@ -1,6 +1,6 @@
 Name:           gnome-mpv
 Version:        0.15
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A simple GTK+ frontend for mpv
 
 License:        GPLv3+
@@ -39,22 +39,6 @@ allowing access to mpv's powerful playback capabilities.
 appstream-util validate-relax --nonet %{buildroot}%{_datadir}/metainfo/io.github.GnomeMpv.appdata.xml
 desktop-file-validate %{buildroot}%{_datadir}/applications/io.github.GnomeMpv.desktop
 
-%post
-/usr/bin/update-desktop-database &> /dev/null || :
-/bin/touch --no-create %{_datadir}/icons/hicolor &> /dev/null || :
-
-%postun
-/usr/bin/update-desktop-database &> /dev/null || :
-if [ $1 -eq 0 ] ; then
-    /bin/touch --no-create %{_datadir}/icons/hicolor &> /dev/null || :
-    /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &> /dev/null || :
-    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
-fi
-
-%posttrans
-/usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &> /dev/null || :
-/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
-
 %files -f %{name}.lang
 %doc AUTHORS README.md
 %license COPYING
@@ -69,6 +53,9 @@ fi
  %{_mandir}/man1/%{name}.1.gz
 
 %changelog
+* Wed Sep 12 2018 Leigh Scott <leigh123linux@googlemail.com> - 0.15-2
+- Remove obsolete scriptlets
+
 * Wed Sep 12 2018 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.15-1
 - Update to 0.15
 
