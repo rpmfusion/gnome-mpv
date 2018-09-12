@@ -1,12 +1,11 @@
 Name:           gnome-mpv
-Version:        0.14
-Release:        3%{?dist}
+Version:        0.15
+Release:        1%{?dist}
 Summary:        A simple GTK+ frontend for mpv
 
 License:        GPLv3+
 URL:            https://github.com/gnome-mpv/gnome-mpv
 Source0:        %{url}/releases/download/v%{version}/%{name}-%{version}.tar.xz
-# Patch0:         update-appdata-and-add-missing-meson-build-file.patch
 
 BuildRequires:  gcc
 BuildRequires:  desktop-file-utils
@@ -70,6 +69,9 @@ fi
  %{_mandir}/man1/%{name}.1.gz
 
 %changelog
+* Wed Sep 12 2018 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.15-1
+- Update to 0.15
+
 * Thu Jul 26 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0.14-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
