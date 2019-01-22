@@ -39,6 +39,23 @@ allowing access to mpv's powerful playback capabilities.
 appstream-util validate-relax --nonet %{buildroot}%{_datadir}/metainfo/io.github.GnomeMpv.appdata.xml
 desktop-file-validate %{buildroot}%{_datadir}/applications/io.github.GnomeMpv.desktop
 
+%post
+/usr/bin/update-desktop-database &> /dev/null || :
+/bin/touch --no-create %{_datadir}/icons/hicolor &> /dev/null || :
+
+%postun
+/usr/bin/update-desktop-database &> /dev/null || :
+if [ $1 -eq 0 ] ; then
+    /bin/touch --no-create %{_datadir}/icons/hicolor &> /dev/null || :
+    /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &> /dev/null || :
+    /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
+fi
+
+%posttrans
+/usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &> /dev/null || :
+/usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
+
+
 %files -f %{name}.lang
 %doc AUTHORS README.md
 %license COPYING
