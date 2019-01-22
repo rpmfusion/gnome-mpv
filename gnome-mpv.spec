@@ -1,6 +1,6 @@
 Name:           gnome-mpv
-Version:        0.15
-Release:        2%{?dist}
+Version:        0.16
+Release:        1%{?dist}
 Summary:        A simple GTK+ frontend for mpv
 
 License:        GPLv3+
@@ -53,6 +53,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/io.github.GnomeMpv.de
  %{_mandir}/man1/%{name}.1.gz
 
 %changelog
+* Tue Jan 22 2019 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.16-1
+- Update to 0.16
+
 * Wed Sep 12 2018 Leigh Scott <leigh123linux@googlemail.com> - 0.15-2
 - Remove obsolete scriptlets
 
