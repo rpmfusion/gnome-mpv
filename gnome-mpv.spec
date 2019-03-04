@@ -1,6 +1,6 @@
 Name:           gnome-mpv
 Version:        0.16
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A simple GTK+ frontend for mpv
 
 License:        GPLv3+
@@ -53,6 +53,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/io.github.GnomeMpv.de
  %{_mandir}/man1/%{name}.1.gz
 
 %changelog
+* Mon Mar 04 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0.16-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+
 * Tue Jan 22 2019 Vasiliy N. Glazov <vascom2@gmail.com>  - 0.16-1
 - Update to 0.16
 
