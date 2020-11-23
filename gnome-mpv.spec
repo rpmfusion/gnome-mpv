@@ -15,7 +15,7 @@ BuildRequires:  pkgconfig(gtk+-3.0) >= 3.18
 BuildRequires:  intltool >= 0.40.6
 BuildRequires:  libappstream-glib
 BuildRequires:  pkgconfig(epoxy)
-BuildRequires:  pkgconfig(mpv) >= 1.20
+BuildRequires:  mpv-libs-devel
 Requires:       youtube-dl >= 2016.03.06
 Requires:       hicolor-icon-theme
 
